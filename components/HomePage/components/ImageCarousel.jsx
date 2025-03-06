@@ -24,19 +24,29 @@ function ImageCarousel({ recipesData }) {
         return <div>Загрузка...</div>;
     }
 
-    console.log(currentCarouselItem.name);
-
     return (
         <div id="carouselExample" className="carousel slide">
-            <div className="carousel-inner">
-                <div className="carousel-item active">
-                    <img src="https://loremflickr.com/1280/720" className="d-block w-100" alt="..." />
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://loremflickr.com/1280/720" class="d-block w-100" alt="..." />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Метка первого слайда</h5>
+                        <p>Некоторый репрезентативный заполнитель для первого слайда.</p>
+                    </div>
                 </div>
-                <div className="carousel-item">
-                    <img src="https://loremflickr.com/1280/720" className="d-block w-100" alt="..." />
+                <div class="carousel-item">
+                    <img src="https://loremflickr.com/1280/720" class="d-block w-100" alt="..." />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Метка второго слайда</h5>
+                        <p>Некоторый репрезентативный заполнитель для второго слайда.</p>
+                    </div>
                 </div>
-                <div className="carousel-item">
-                    <img src="https://loremflickr.com/1280/720" className="d-block w-100" alt="..." />
+                <div class="carousel-item">
+                    <img src="https://loremflickr.com/1280/720" class="d-block w-100" alt="..." />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Метка третьего слайда</h5>
+                        <p>Некоторый репрезентативный заполнитель для третьего слайда.</p>
+                    </div>
                 </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
