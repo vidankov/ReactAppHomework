@@ -7,7 +7,7 @@ function GenerateRandomColor() {
     for (let i = 0; i < 3; i++) {
         result = `${result}${generateHexRGB()}`
     };
-    console.log(`Hex-код сгенерированного фона CarouselItemImage: ${result}`);
+    // console.log(`Hex-код сгенерированного фона CarouselItemImage: ${result}`);
     return result;
 }
 

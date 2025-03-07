@@ -1,6 +1,7 @@
 import CarouselItemImage from "./CarouselItemImage";
 
 function CarouselItem(props) {
+    // console.log(`"id элемента ${props.item.id}, isActive: ${props.isActive}"`);
     return (
         <div className={`carousel-item${props.isActive ? ' active' : ''}`}>
             <CarouselItemImage title={props.item ? props.item.name : "Изображение загружается..."} />
