@@ -28,7 +28,7 @@ function Carousel({ recipesData }) {
     return (
         <div id="carouselExample" className="carousel slide">
             <div className="carousel-inner">
-                <CarouselItem isActive={true} key='ci-1' />
+                <CarouselItem isActive={true} item={currentCarouselItem} key='ci-1' />
                 <CarouselItem isActive={false} key='ci-2' />
                 <CarouselItem isActive={false} key='ci-3' />
             </div>
