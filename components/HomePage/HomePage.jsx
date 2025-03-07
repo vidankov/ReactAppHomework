@@ -1,3 +1,5 @@
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 import Carousel from "./components/Carousel";
 import { useEffect, useState } from 'react';
 
@@ -12,9 +14,14 @@ function HomePage() {
             .then(data => setRecipesArray(data.recipes))
             .catch(error => console.error(error));
     }, []);
-
+    
     return (
-        <Carousel recipesData={recipesArray} />
+        <section className="container">
+            <Header />
+            <h1 className="text-center">Рецепты блюд на любой вкус!</h1>
+            <Carousel recipesData={recipesArray} />
+            <Footer />
+        </section>
   );
 }
 
