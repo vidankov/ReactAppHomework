@@ -1,4 +1,4 @@
-import ImageCarousel from "./components/ImageCarousel";
+import Carousel from "./components/Carousel";
 import { useEffect, useState } from 'react';
 
 const photosDbConnectionURL = 'https://dummyjson.com/recipes';
@@ -14,7 +14,7 @@ function HomePage() {
     }, []);
 
     return (
-        <ImageCarousel recipesData={recipesArray} />
+        <Carousel recipesData={recipesArray} />
   );
 }
 

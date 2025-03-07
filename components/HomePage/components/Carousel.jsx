@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import CarouselItem from "./CarouselItem";
 
-function ImageCarousel({ recipesData }) {
+function Carousel({ recipesData }) {
     /*
         Почему данные не гарантированы на момент рендера ImageCarousel:
         Асинхронность fetch: Запрос данных через fetch — это асинхронная операция. Это означает, что данные будут получены не сразу, а через некоторое время после того, как запрос завершится.
@@ -26,28 +27,10 @@ function ImageCarousel({ recipesData }) {
 
     return (
         <div id="carouselExample" className="carousel slide">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://loremflickr.com/1280/720" class="d-block w-100" alt="..." />
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Метка первого слайда</h5>
-                        <p>Некоторый репрезентативный заполнитель для первого слайда.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://loremflickr.com/1280/720" class="d-block w-100" alt="..." />
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Метка второго слайда</h5>
-                        <p>Некоторый репрезентативный заполнитель для второго слайда.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://loremflickr.com/1280/720" class="d-block w-100" alt="..." />
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Метка третьего слайда</h5>
-                        <p>Некоторый репрезентативный заполнитель для третьего слайда.</p>
-                    </div>
-                </div>
+            <div className="carousel-inner">
+                <CarouselItem isActive={true} key='ci-1' />
+                <CarouselItem isActive={false} key='ci-2' />
+                <CarouselItem isActive={false} key='ci-3' />
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -61,4 +44,4 @@ function ImageCarousel({ recipesData }) {
     );
 }
 
-export default ImageCarousel;
+export default Carousel;
